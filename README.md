@@ -1,4 +1,4 @@
-Namaste! I'm Rohit Choudhary 👋
+Namaste! I'm Rohit 👋
 
 🚀 AI Engineer | 🛡️ Cybersecurity Developer | 🐍 Python Automation Specialist
 
