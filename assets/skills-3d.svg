@@ -1,0 +1,195 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 220" width="900" height="220">
+<defs>
+  <style>
+    @keyframes floatA {
+      0%,100% { transform: translateY(0px); }
+      50%      { transform: translateY(-10px); }
+    }
+    @keyframes floatB {
+      0%,100% { transform: translateY(0px); }
+      50%      { transform: translateY(-8px); }
+    }
+    @keyframes floatC {
+      0%,100% { transform: translateY(0px); }
+      50%      { transform: translateY(-12px); }
+    }
+    @keyframes glow {
+      0%,100% { opacity: 0.7; }
+      50%      { opacity: 1; }
+    }
+    @keyframes pulse {
+      0%,100% { opacity: 0.4; }
+      50%      { opacity: 0.9; }
+    }
+    .fa { animation: floatA 4s ease-in-out infinite; }
+    .fb { animation: floatB 5s ease-in-out infinite; animation-delay: 0.5s; }
+    .fc { animation: floatC 3.5s ease-in-out infinite; animation-delay: 1s; }
+    .fd { animation: floatA 4.5s ease-in-out infinite; animation-delay: 1.5s; }
+    .fe { animation: floatB 4s ease-in-out infinite; animation-delay: 2s; }
+    .ff { animation: floatC 5s ease-in-out infinite; animation-delay: 0.8s; }
+    .glow { animation: glow 2s ease-in-out infinite; }
+    .pulse { animation: pulse 3s ease-in-out infinite; }
+  </style>
+  <linearGradient id="bg2" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%"  stop-color="#020810"/>
+    <stop offset="100%" stop-color="#050e1e"/>
+  </linearGradient>
+  <filter id="cglow" x="-40%" y="-40%" width="180%" height="180%">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <filter id="tlabel" x="-20%" y="-20%" width="140%" height="140%">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+
+<rect width="900" height="220" fill="url(#bg2)"/>
+
+<!-- Title -->
+<text x="450" y="28" font-family="'Courier New',monospace" font-size="13" font-weight="700"
+      fill="#00d4ff" text-anchor="middle" letter-spacing="6" filter="url(#tlabel)" class="glow">⚡ TECH ARSENAL ⚡</text>
+<line x1="150" y1="35" x2="750" y2="35" stroke="#00d4ff" stroke-width="0.5" opacity="0.3"/>
+
+<!-- ═══════════════════════════════════════
+     ISOMETRIC CUBE MACRO
+     Cube centered at (cx, base_y), side=s
+     Top:   (cx, by-2s), (cx-0.866s, by-1.5s), (cx, by-s), (cx+0.866s, by-1.5s)
+     Left:  (cx-0.866s, by-1.5s), (cx, by-s), (cx, by), (cx-0.866s, by-0.5s)
+     Right: (cx, by-s), (cx+0.866s, by-1.5s), (cx+0.866s, by-0.5s), (cx, by)
+     s=32 → 0.866s≈28
+═══════════════════════════════════════ -->
+
+<!-- CUBE 1: Python  cx=85, by=170, s=32 -->
+<g class="fa">
+  <!-- Shadow -->
+  <ellipse cx="85" cy="176" rx="28" ry="8" fill="#3776AB" opacity="0.12"/>
+  <!-- Right face (dark) -->
+  <polygon points="85,138 113,123 113,155 85,170" fill="#1a4a7a"/>
+  <!-- Left face (mid) -->
+  <polygon points="57,123 85,138 85,170 57,155" fill="#2a6aaa"/>
+  <!-- Top face (bright) -->
+  <polygon points="85,106 113,123 85,138 57,123" fill="#3776AB"/>
+  <!-- Edge highlights -->
+  <polyline points="57,123 85,106 113,123" stroke="#5596cb" stroke-width="1.2" fill="none"/>
+  <line x1="85" y1="106" x2="85" y2="138" stroke="#5596cb" stroke-width="1" opacity="0.8"/>
+  <!-- Glow border -->
+  <polygon points="85,106 113,123 85,138 57,123" fill="none" stroke="#3776AB" stroke-width="0.8" filter="url(#cglow)" opacity="0.7"/>
+  <!-- Label -->
+  <text x="85" y="196" font-family="'Courier New',monospace" font-size="11" font-weight="700"
+        fill="#3776AB" text-anchor="middle" filter="url(#tlabel)">Python</text>
+</g>
+
+<!-- CUBE 2: TensorFlow  cx=175, by=160, s=28 -->
+<g class="fb">
+  <ellipse cx="175" cy="165" rx="24" ry="7" fill="#FF6F00" opacity="0.12"/>
+  <polygon points="175,132 199,118 199,146 175,160" fill="#8B3A00"/>
+  <polygon points="151,118 175,132 175,160 151,146" fill="#c05500"/>
+  <polygon points="175,104 199,118 175,132 151,118" fill="#FF6F00"/>
+  <polyline points="151,118 175,104 199,118" stroke="#ffaa44" stroke-width="1.2" fill="none"/>
+  <line x1="175" y1="104" x2="175" y2="132" stroke="#ffaa44" stroke-width="1" opacity="0.8"/>
+  <polygon points="175,104 199,118 175,132 151,118" fill="none" stroke="#FF6F00" stroke-width="0.8" filter="url(#cglow)" opacity="0.7"/>
+  <text x="175" y="185" font-family="'Courier New',monospace" font-size="10" font-weight="700"
+        fill="#FF6F00" text-anchor="middle" filter="url(#tlabel)">TensorFlow</text>
+</g>
+
+<!-- CUBE 3: LangChain  cx=260, by=170, s=32 -->
+<g class="fc">
+  <ellipse cx="260" cy="176" rx="28" ry="8" fill="#00d4ff" opacity="0.12"/>
+  <polygon points="260,138 288,123 288,155 260,170" fill="#004455"/>
+  <polygon points="232,123 260,138 260,170 232,155" fill="#006677"/>
+  <polygon points="260,106 288,123 260,138 232,123" fill="#00aacc"/>
+  <polyline points="232,123 260,106 288,123" stroke="#00d4ff" stroke-width="1.2" fill="none"/>
+  <line x1="260" y1="106" x2="260" y2="138" stroke="#00d4ff" stroke-width="1" opacity="0.8"/>
+  <polygon points="260,106 288,123 260,138 232,123" fill="none" stroke="#00d4ff" stroke-width="0.8" filter="url(#cglow)" opacity="0.7"/>
+  <text x="260" y="196" font-family="'Courier New',monospace" font-size="11" font-weight="700"
+        fill="#00d4ff" text-anchor="middle" filter="url(#tlabel)">LangChain</text>
+</g>
+
+<!-- CUBE 4: FastAPI  cx=345, by=162, s=28 -->
+<g class="fd">
+  <ellipse cx="345" cy="167" rx="24" ry="7" fill="#009688" opacity="0.12"/>
+  <polygon points="345,134 369,120 369,148 345,162" fill="#00443c"/>
+  <polygon points="321,120 345,134 345,162 321,148" fill="#006660"/>
+  <polygon points="345,106 369,120 345,134 321,120" fill="#009688"/>
+  <polyline points="321,120 345,106 369,120" stroke="#00c8b8" stroke-width="1.2" fill="none"/>
+  <line x1="345" y1="106" x2="345" y2="134" stroke="#00c8b8" stroke-width="1" opacity="0.8"/>
+  <polygon points="345,106 369,120 345,134 321,120" fill="none" stroke="#009688" stroke-width="0.8" filter="url(#cglow)" opacity="0.7"/>
+  <text x="345" y="187" font-family="'Courier New',monospace" font-size="11" font-weight="700"
+        fill="#009688" text-anchor="middle" filter="url(#tlabel)">FastAPI</text>
+</g>
+
+<!-- CUBE 5: Groq AI  cx=450, by=175, s=36 (biggest = star) -->
+<g class="fa">
+  <ellipse cx="450" cy="182" rx="31" ry="9" fill="#00d4ff" opacity="0.18"/>
+  <!-- right -->
+  <polygon points="450,139 481,122 481,158 450,175" fill="#003344"/>
+  <!-- left -->
+  <polygon points="419,122 450,139 450,175 419,158" fill="#005577"/>
+  <!-- top -->
+  <polygon points="450,104 481,122 450,139 419,122" fill="#00aadd"/>
+  <polyline points="419,122 450,104 481,122" stroke="#00d4ff" stroke-width="1.5" fill="none"/>
+  <line x1="450" y1="104" x2="450" y2="139" stroke="#00d4ff" stroke-width="1.2" opacity="0.9"/>
+  <polygon points="450,104 481,122 450,139 419,122" fill="none" stroke="#00d4ff" stroke-width="1" filter="url(#cglow)" opacity="0.9"/>
+  <!-- Star label for center piece -->
+  <text x="450" y="200" font-family="'Courier New',monospace" font-size="12" font-weight="700"
+        fill="#00d4ff" text-anchor="middle" filter="url(#tlabel)">⚡ Groq AI</text>
+</g>
+
+<!-- CUBE 6: Playwright  cx=555, by=162, s=28 -->
+<g class="fe">
+  <ellipse cx="555" cy="167" rx="24" ry="7" fill="#2EAD33" opacity="0.12"/>
+  <polygon points="555,134 579,120 579,148 555,162" fill="#114411"/>
+  <polygon points="531,120 555,134 555,162 531,148" fill="#226622"/>
+  <polygon points="555,106 579,120 555,134 531,120" fill="#2EAD33"/>
+  <polyline points="531,120 555,106 579,120" stroke="#66dd66" stroke-width="1.2" fill="none"/>
+  <line x1="555" y1="106" x2="555" y2="134" stroke="#66dd66" stroke-width="1" opacity="0.8"/>
+  <polygon points="555,106 579,120 555,134 531,120" fill="none" stroke="#2EAD33" stroke-width="0.8" filter="url(#cglow)" opacity="0.7"/>
+  <text x="555" y="187" font-family="'Courier New',monospace" font-size="10" font-weight="700"
+        fill="#2EAD33" text-anchor="middle" filter="url(#tlabel)">Playwright</text>
+</g>
+
+<!-- CUBE 7: Kali Linux  cx=640, by=170, s=32 -->
+<g class="ff">
+  <ellipse cx="640" cy="176" rx="28" ry="8" fill="#557C94" opacity="0.12"/>
+  <polygon points="640,138 668,123 668,155 640,170" fill="#223344"/>
+  <polygon points="612,123 640,138 640,170 612,155" fill="#334455"/>
+  <polygon points="640,106 668,123 640,138 612,123" fill="#557C94"/>
+  <polyline points="612,123 640,106 668,123" stroke="#88aabb" stroke-width="1.2" fill="none"/>
+  <line x1="640" y1="106" x2="640" y2="138" stroke="#88aabb" stroke-width="1" opacity="0.8"/>
+  <polygon points="640,106 668,123 640,138 612,123" fill="none" stroke="#557C94" stroke-width="0.8" filter="url(#cglow)" opacity="0.7"/>
+  <text x="640" y="196" font-family="'Courier New',monospace" font-size="11" font-weight="700"
+        fill="#557C94" text-anchor="middle" filter="url(#tlabel)">Kali Linux</text>
+</g>
+
+<!-- CUBE 8: Docker  cx=725, by=162, s=28 -->
+<g class="fb">
+  <ellipse cx="725" cy="167" rx="24" ry="7" fill="#2496ED" opacity="0.12"/>
+  <polygon points="725,134 749,120 749,148 725,162" fill="#0d3d6b"/>
+  <polygon points="701,120 725,134 725,162 701,148" fill="#1a5a9e"/>
+  <polygon points="725,106 749,120 725,134 701,120" fill="#2496ED"/>
+  <polyline points="701,120 725,106 749,120" stroke="#66bbff" stroke-width="1.2" fill="none"/>
+  <line x1="725" y1="106" x2="725" y2="134" stroke="#66bbff" stroke-width="1" opacity="0.8"/>
+  <polygon points="725,106 749,120 725,134 701,120" fill="none" stroke="#2496ED" stroke-width="0.8" filter="url(#cglow)" opacity="0.7"/>
+  <text x="725" y="187" font-family="'Courier New',monospace" font-size="11" font-weight="700"
+        fill="#2496ED" text-anchor="middle" filter="url(#tlabel)">Docker</text>
+</g>
+
+<!-- CUBE 9: MongoDB  cx=815, by=170, s=32 -->
+<g class="fc">
+  <ellipse cx="815" cy="176" rx="28" ry="8" fill="#47A248" opacity="0.12"/>
+  <polygon points="815,138 843,123 843,155 815,170" fill="#1a3d1a"/>
+  <polygon points="787,123 815,138 815,170 787,155" fill="#2a5e2a"/>
+  <polygon points="815,106 843,123 815,138 787,123" fill="#47A248"/>
+  <polyline points="787,123 815,106 843,123" stroke="#77cc77" stroke-width="1.2" fill="none"/>
+  <line x1="815" y1="106" x2="815" y2="138" stroke="#77cc77" stroke-width="1" opacity="0.8"/>
+  <polygon points="815,106 843,123 815,138 787,123" fill="none" stroke="#47A248" stroke-width="0.8" filter="url(#cglow)" opacity="0.7"/>
+  <text x="815" y="196" font-family="'Courier New',monospace" font-size="11" font-weight="700"
+        fill="#47A248" text-anchor="middle" filter="url(#tlabel)">MongoDB</text>
+</g>
+
+<!-- Bottom decorative line -->
+<line x1="0" y1="210" x2="900" y2="210" stroke="#7928ca" stroke-width="0.5" opacity="0.3"/>
+<text x="450" y="218" font-family="'Courier New',monospace" font-size="9"
+      fill="#444" text-anchor="middle" letter-spacing="4">+ TENSORFLOW • PYTORCH • SCIKIT-LEARN • SELENIUM • POSTGRESQL • REDIS • BURPSUITE • METASPLOIT +</text>
+</svg>
