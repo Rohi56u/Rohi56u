@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 280" width="900" height="280">
+<defs>
+  <style>
+    @keyframes cardglow {
+      0%,100% { filter: drop-shadow(0 0 4px #00d4ff); }
+      50%      { filter: drop-shadow(0 0 14px #00d4ff) drop-shadow(0 0 28px #003366); }
+    }
+    @keyframes cardglow2 {
+      0%,100% { filter: drop-shadow(0 0 4px #7928ca); }
+      50%      { filter: drop-shadow(0 0 14px #7928ca) drop-shadow(0 0 28px #220044); }
+    }
+    @keyframes cardglow3 {
+      0%,100% { filter: drop-shadow(0 0 4px #00ff88); }
+      50%      { filter: drop-shadow(0 0 14px #00ff88) drop-shadow(0 0 28px #003322); }
+    }
+    @keyframes fadeup {
+      0%,100% { opacity: 0.85; transform: translateY(0); }
+      50%      { opacity: 1;    transform: translateY(-3px); }
+    }
+    @keyframes pulse { 0%,100% { opacity: 0.5; } 50% { opacity: 1; } }
+    .cg1 { animation: cardglow 3s ease-in-out infinite; }
+    .cg2 { animation: cardglow2 3.5s ease-in-out infinite; animation-delay: 0.5s; }
+    .cg3 { animation: cardglow3 2.8s ease-in-out infinite; animation-delay: 1s; }
+    .cg4 { animation: cardglow 4s ease-in-out infinite; animation-delay: 1.5s; }
+    .cg5 { animation: cardglow2 3.2s ease-in-out infinite; animation-delay: 0.3s; }
+    .cg6 { animation: cardglow3 3.8s ease-in-out infinite; animation-delay: 0.8s; }
+    .fu  { animation: fadeup 4s ease-in-out infinite; }
+    .pulse { animation: pulse 2s ease-in-out infinite; }
+  </style>
+  <linearGradient id="bg3" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#020810"/><stop offset="100%" stop-color="#050e1e"/>
+  </linearGradient>
+  <!-- Card gradients -->
+  <linearGradient id="card-blue" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#001830"/><stop offset="100%" stop-color="#003060"/>
+  </linearGradient>
+  <linearGradient id="card-purple" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#1a0033"/><stop offset="100%" stop-color="#3d0066"/>
+  </linearGradient>
+  <linearGradient id="card-green" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#001a0d"/><stop offset="100%" stop-color="#003320"/>
+  </linearGradient>
+</defs>
+
+<rect width="900" height="280" fill="url(#bg3)"/>
+
+<!-- TITLE -->
+<text x="450" y="28" font-family="'Courier New',monospace" font-size="13" font-weight="700"
+      fill="#00d4ff" text-anchor="middle" letter-spacing="6" class="pulse">🚀 FLAGSHIP PROJECTS 🚀</text>
+<line x1="100" y1="36" x2="800" y2="36" stroke="#00d4ff" stroke-width="0.5" opacity="0.3"/>
+
+<!-- ── ROW 1 ── -->
+
+<!-- CARD 1: AI Debug Agent  x=18, y=50 w=270, h=100 -->
+<g class="cg1 fu">
+  <rect x="18" y="50" width="270" height="100" rx="6" fill="url(#card-blue)" stroke="#00d4ff" stroke-width="1"/>
+  <!-- 3D top edge illusion -->
+  <rect x="18" y="50" width="270" height="3" rx="6" fill="#00d4ff" opacity="0.4"/>
+  <!-- Left accent bar -->
+  <rect x="18" y="50" width="4" height="100" rx="3" fill="#00d4ff" opacity="0.7"/>
+  <!-- Icon -->
+  <text x="38" y="78" font-size="22">🤖</text>
+  <!-- Title -->
+  <text x="66" y="72" font-family="'Courier New',monospace" font-size="13" font-weight="700"
+        fill="#00d4ff">AI Debug Agent</text>
+  <!-- Desc -->
+  <text x="26" y="95" font-family="'Courier New',monospace" font-size="9.5" fill="#aaccdd">Autonomous debugging powered by</text>
+  <text x="26" y="109" font-family="'Courier New',monospace" font-size="9.5" fill="#aaccdd">Groq LLM. Real-time bug detection,</text>
+  <text x="26" y="123" font-family="'Courier New',monospace" font-size="9.5" fill="#aaccdd">analysis &amp; auto-fix engine.</text>
+  <!-- Tags -->
+  <rect x="26" y="132" width="52" height="13" rx="6" fill="#003060" stroke="#00d4ff" stroke-width="0.7"/>
+  <text x="52" y="142" font-family="'Courier New',monospace" font-size="8" fill="#00d4ff" text-anchor="middle">Python</text>
+  <rect x="84" y="132" width="40" height="13" rx="6" fill="#003060" stroke="#00d4ff" stroke-width="0.7"/>
+  <text x="104" y="142" font-family="'Courier New',monospace" font-size="8" fill="#00d4ff" text-anchor="middle">Groq</text>
+  <rect x="130" y="132" width="60" height="13" rx="6" fill="#003060" stroke="#00d4ff" stroke-width="0.7"/>
+  <text x="160" y="142" font-family="'Courier New',monospace" font-size="8" fill="#00d4ff" text-anchor="middle">LangChain</text>
+</g>
+
+<!-- CARD 2: Lead Scraper  x=315, y=50 -->
+<g class="cg2 fu" style="animation-delay: 0.4s">
+  <rect x="315" y="50" width="270" height="100" rx="6" fill="url(#card-purple)" stroke="#7928ca" stroke-width="1"/>
+  <rect x="315" y="50" width="270" height="3" rx="6" fill="#7928ca" opacity="0.4"/>
+  <rect x="315" y="50" width="4" height="100" rx="3" fill="#7928ca" opacity="0.7"/>
+  <text x="335" y="78" font-size="22">🌐</text>
+  <text x="363" y="72" font-family="'Courier New',monospace" font-size="13" font-weight="700"
+        fill="#c084fc">Lead Scraper Bot</text>
+  <text x="323" y="95" font-family="'Courier New',monospace" font-size="9.5" fill="#ccaaee">7-tier intelligent scraping system.</text>
+  <text x="323" y="109" font-family="'Courier New',monospace" font-size="9.5" fill="#ccaaee">Google Maps, LinkedIn, IndiaMART.</text>
+  <text x="323" y="123" font-family="'Courier New',monospace" font-size="9.5" fill="#ccaaee">AI-powered lead intelligence.</text>
+  <rect x="323" y="132" width="60" height="13" rx="6" fill="#2d0055" stroke="#7928ca" stroke-width="0.7"/>
+  <text x="353" y="142" font-family="'Courier New',monospace" font-size="8" fill="#c084fc" text-anchor="middle">Playwright</text>
+  <rect x="389" y="132" width="34" height="13" rx="6" fill="#2d0055" stroke="#7928ca" stroke-width="0.7"/>
+  <text x="406" y="142" font-family="'Courier New',monospace" font-size="8" fill="#c084fc" text-anchor="middle">AI</text>
+  <rect x="429" y="132" width="50" height="13" rx="6" fill="#2d0055" stroke="#7928ca" stroke-width="0.7"/>
+  <text x="454" y="142" font-family="'Courier New',monospace" font-size="8" fill="#c084fc" text-anchor="middle">Python</text>
+</g>
+
+<!-- CARD 3: Security Scanner  x=612, y=50 -->
+<g class="cg3 fu" style="animation-delay: 0.8s">
+  <rect x="612" y="50" width="270" height="100" rx="6" fill="url(#card-green)" stroke="#00ff88" stroke-width="1"/>
+  <rect x="612" y="50" width="270" height="3" rx="6" fill="#00ff88" opacity="0.4"/>
+  <rect x="612" y="50" width="4" height="100" rx="3" fill="#00ff88" opacity="0.7"/>
+  <text x="632" y="78" font-size="22">🛡️</text>
+  <text x="660" y="72" font-family="'Courier New',monospace" font-size="12" font-weight="700"
+        fill="#00ff88">AI Security Scanner</text>
+  <text x="620" y="95" font-family="'Courier New',monospace" font-size="9.5" fill="#aaddbb">ML-powered vulnerability scanner</text>
+  <text x="620" y="109" font-family="'Courier New',monospace" font-size="9.5" fill="#aaddbb">with auto pen-testing workflows.</text>
+  <text x="620" y="123" font-family="'Courier New',monospace" font-size="9.5" fill="#aaddbb">Threat detection &amp; response.</text>
+  <rect x="620" y="132" width="40" height="13" rx="6" fill="#001a0d" stroke="#00ff88" stroke-width="0.7"/>
+  <text x="640" y="142" font-family="'Courier New',monospace" font-size="8" fill="#00ff88" text-anchor="middle">Nmap</text>
+  <rect x="666" y="132" width="34" height="13" rx="6" fill="#001a0d" stroke="#00ff88" stroke-width="0.7"/>
+  <text x="683" y="142" font-family="'Courier New',monospace" font-size="8" fill="#00ff88" text-anchor="middle">ML</text>
+  <rect x="706" y="132" width="50" height="13" rx="6" fill="#001a0d" stroke="#00ff88" stroke-width="0.7"/>
+  <text x="731" y="142" font-family="'Courier New',monospace" font-size="8" fill="#00ff88" text-anchor="middle">Python</text>
+</g>
+
+<!-- ── ROW 2 ── -->
+
+<!-- CARD 4: NexusAI  x=18, y=168 -->
+<g class="cg4 fu" style="animation-delay: 1.2s">
+  <rect x="18" y="168" width="270" height="100" rx="6" fill="url(#card-purple)" stroke="#7928ca" stroke-width="1"/>
+  <rect x="18" y="168" width="270" height="3" rx="6" fill="#7928ca" opacity="0.4"/>
+  <rect x="18" y="168" width="4" height="100" rx="3" fill="#7928ca" opacity="0.7"/>
+  <text x="38" y="196" font-size="22">🧠</text>
+  <text x="66" y="190" font-family="'Courier New',monospace" font-size="13" font-weight="700"
+        fill="#c084fc">NexusAI Agent</text>
+  <text x="26" y="213" font-family="'Courier New',monospace" font-size="9.5" fill="#ccaaee">Production-grade multi-modal AI</text>
+  <text x="26" y="227" font-family="'Courier New',monospace" font-size="9.5" fill="#ccaaee">agent with persistent memory,</text>
+  <text x="26" y="241" font-family="'Courier New',monospace" font-size="9.5" fill="#ccaaee">tool-use &amp; autonomous reasoning.</text>
+  <rect x="26" y="250" width="50" height="13" rx="6" fill="#2d0055" stroke="#7928ca" stroke-width="0.7"/>
+  <text x="51" y="260" font-family="'Courier New',monospace" font-size="8" fill="#c084fc" text-anchor="middle">OpenAI</text>
+  <rect x="82" y="250" width="52" height="13" rx="6" fill="#2d0055" stroke="#7928ca" stroke-width="0.7"/>
+  <text x="108" y="260" font-family="'Courier New',monospace" font-size="8" fill="#c084fc" text-anchor="middle">FastAPI</text>
+  <rect x="140" y="250" width="50" height="13" rx="6" fill="#2d0055" stroke="#7928ca" stroke-width="0.7"/>
+  <text x="165" y="260" font-family="'Courier New',monospace" font-size="8" fill="#c084fc" text-anchor="middle">Python</text>
+</g>
+
+<!-- CARD 5: SIEM  x=315, y=168 -->
+<g class="cg5 fu" style="animation-delay: 0.6s">
+  <rect x="315" y="168" width="270" height="100" rx="6" fill="url(#card-blue)" stroke="#00d4ff" stroke-width="1"/>
+  <rect x="315" y="168" width="270" height="3" rx="6" fill="#00d4ff" opacity="0.4"/>
+  <rect x="315" y="168" width="4" height="100" rx="3" fill="#00d4ff" opacity="0.7"/>
+  <text x="335" y="196" font-size="22">⚡</text>
+  <text x="363" y="190" font-family="'Courier New',monospace" font-size="12" font-weight="700"
+        fill="#00d4ff">SIEM Automation</text>
+  <text x="323" y="213" font-family="'Courier New',monospace" font-size="9.5" fill="#aaccdd">Intelligent threat detection with</text>
+  <text x="323" y="227" font-family="'Courier New',monospace" font-size="9.5" fill="#aaccdd">automated incident response.</text>
+  <text x="323" y="241" font-family="'Courier New',monospace" font-size="9.5" fill="#aaccdd">Real-time security monitoring.</text>
+  <rect x="323" y="250" width="60" height="13" rx="6" fill="#003060" stroke="#00d4ff" stroke-width="0.7"/>
+  <text x="353" y="260" font-family="'Courier New',monospace" font-size="8" fill="#00d4ff" text-anchor="middle">ELK Stack</text>
+  <rect x="389" y="250" width="34" height="13" rx="6" fill="#003060" stroke="#00d4ff" stroke-width="0.7"/>
+  <text x="406" y="260" font-family="'Courier New',monospace" font-size="8" fill="#00d4ff" text-anchor="middle">ML</text>
+  <rect x="429" y="250" width="50" height="13" rx="6" fill="#003060" stroke="#00d4ff" stroke-width="0.7"/>
+  <text x="454" y="260" font-family="'Courier New',monospace" font-size="8" fill="#00d4ff" text-anchor="middle">Python</text>
+</g>
+
+<!-- CARD 6: Cyber Toolkit  x=612, y=168 -->
+<g class="cg6 fu" style="animation-delay: 1s">
+  <rect x="612" y="168" width="270" height="100" rx="6" fill="url(#card-green)" stroke="#00ff88" stroke-width="1"/>
+  <rect x="612" y="168" width="270" height="3" rx="6" fill="#00ff88" opacity="0.4"/>
+  <rect x="612" y="168" width="4" height="100" rx="3" fill="#00ff88" opacity="0.7"/>
+  <text x="632" y="196" font-size="22">🔐</text>
+  <text x="660" y="190" font-family="'Courier New',monospace" font-size="12" font-weight="700"
+        fill="#00ff88">Python Cyber Toolkit</text>
+  <text x="620" y="213" font-family="'Courier New',monospace" font-size="9.5" fill="#aaddbb">50+ unified offensive &amp; defensive</text>
+  <text x="620" y="227" font-family="'Courier New',monospace" font-size="9.5" fill="#aaddbb">security tools. Ethical hacking</text>
+  <text x="620" y="241" font-family="'Courier New',monospace" font-size="9.5" fill="#aaddbb">framework &amp; automation suite.</text>
+  <rect x="620" y="250" width="42" height="13" rx="6" fill="#001a0d" stroke="#00ff88" stroke-width="0.7"/>
+  <text x="641" y="260" font-family="'Courier New',monospace" font-size="8" fill="#00ff88" text-anchor="middle">Python</text>
+  <rect x="668" y="250" width="36" height="13" rx="6" fill="#001a0d" stroke="#00ff88" stroke-width="0.7"/>
+  <text x="686" y="260" font-family="'Courier New',monospace" font-size="8" fill="#00ff88" text-anchor="middle">Bash</text>
+  <rect x="710" y="250" width="40" height="13" rx="6" fill="#001a0d" stroke="#00ff88" stroke-width="0.7"/>
+  <text x="730" y="260" font-family="'Courier New',monospace" font-size="8" fill="#00ff88" text-anchor="middle">Linux</text>
+</g>
+</svg>
