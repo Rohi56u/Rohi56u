@@ -163,21 +163,21 @@
 <!-- ── 3D EXTRUDED TITLE TEXT ── -->
 <!-- Extrusion shadow layers (dark to mid, offset diagonally) -->
 <text x="457" y="106" font-family="'Courier New',Courier,monospace" font-weight="900" font-size="58"
-      fill="#001020" text-anchor="middle" letter-spacing="6">ROHIT CHOUDHARY</text>
+      fill="#001020" text-anchor="middle" letter-spacing="6">ROHIT </text>
 <text x="456" y="105" font-family="'Courier New',Courier,monospace" font-weight="900" font-size="58"
-      fill="#001830" text-anchor="middle" letter-spacing="6">ROHIT CHOUDHARY</text>
+      fill="#001830" text-anchor="middle" letter-spacing="6">ROHIT </text>
 <text x="455" y="104" font-family="'Courier New',Courier,monospace" font-weight="900" font-size="58"
-      fill="#002244" text-anchor="middle" letter-spacing="6">ROHIT CHOUDHARY</text>
+      fill="#002244" text-anchor="middle" letter-spacing="6">ROHIT </text>
 <text x="454" y="103" font-family="'Courier New',Courier,monospace" font-weight="900" font-size="58"
-      fill="#003060" text-anchor="middle" letter-spacing="6">ROHIT CHOUDHARY</text>
+      fill="#003060" text-anchor="middle" letter-spacing="6">ROHIT </text>
 <text x="453" y="102" font-family="'Courier New',Courier,monospace" font-weight="900" font-size="58"
-      fill="#004080" text-anchor="middle" letter-spacing="6">ROHIT CHOUDHARY</text>
+      fill="#004080" text-anchor="middle" letter-spacing="6">ROHIT </text>
 <text x="452" y="101" font-family="'Courier New',Courier,monospace" font-weight="900" font-size="58"
-      fill="#0055a0" text-anchor="middle" letter-spacing="6">ROHIT CHOUDHARY</text>
+      fill="#0055a0" text-anchor="middle" letter-spacing="6">ROHIT </text>
 <!-- Top/front face — bright cyan glow -->
 <text x="450" y="99" font-family="'Courier New',Courier,monospace" font-weight="900" font-size="58"
       fill="#00d4ff" text-anchor="middle" letter-spacing="6"
-      filter="url(#f-strong)" class="title">ROHIT CHOUDHARY</text>
+      filter="url(#f-strong)" class="title">ROHIT </text>
 
 <!-- ── 3D SUBTITLE TEXT ── -->
 <text x="452" y="125" font-family="'Courier New',Courier,monospace" font-weight="700" font-size="15"
