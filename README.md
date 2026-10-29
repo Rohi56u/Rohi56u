@@ -1,6 +1,6 @@
 <!-- ████████████████████████████████████████████████████████████████ -->
 <!-- ██                                                            ██ -->
-<!-- ██         ROHIT CHOUDHARY — GITHUB PROFILE README           ██ -->
+<!-- ██         ROHIT  — GITHUB PROFILE README           ██ -->
 <!-- ██         Built with custom 3D SVG assets                   ██ -->
 <!-- ████████████████████████████████████████████████████████████████ -->
 
@@ -25,7 +25,7 @@
 <br/><br/>
 
 <!-- SOCIAL LINKS -->
-<a href="https://linkedin.com/in/rohit-choudharyPortfolio">
+<a href="https://linkedin.com/in/rohit-portfolio">
   <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
 </a>
 &nbsp;
@@ -46,7 +46,7 @@
 ```python
 class RohitChoudhary:
     def __init__(self):
-        self.name        = "Rohit Choudhary"
+        self.name        = "Rohit"
         self.username    = "@Rohi56u"
         self.location    = "Gurgaon, Haryana 🇮🇳"
         self.roles       = [
